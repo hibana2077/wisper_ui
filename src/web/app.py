@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import torch
+import os
 import whisper
 
 # check gpu memory size
@@ -54,6 +55,9 @@ if audio_file:
         f.write(audio_file.read())
     with st.spinner("轉換中..."):
         result = model.transcribe(file_name)
+    # remove file
+    os.remove(file_name)
+    st.write("轉換完成!")
     st.write(result['text'])
     if result:
         st.dataframe(convert_to_dataframe(result).iloc[:15])
