@@ -28,7 +28,7 @@ def convert_to_dataframe(result):
 
 st.title("AI 語音轉逐字稿")
 
-st.markdown("""![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI)""")
+st.markdown("""![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B?style=plastic-square&logo=Streamlit)""")
 st.write("""這是一個使用 OpenAI 的 Whisper 模型來進行語音轉逐字稿的網頁應用程式。""")
 st.write("""Whisper 是一個基於 Transformer 的端對端語音轉文字模型，可以將語音檔案轉換成逐字稿。""")
 
@@ -39,6 +39,9 @@ with st.expander("為什麼有些模型無法選擇?"):
     由於 Whisper 模型需要大量的 GPU 記憶體，因此本應用程式會根據您的 GPU 記憶體大小來過濾掉無法運行的模型。
     ''')
     st.image("https://www.groovypost.com/wp-content/uploads/2022/12/gpu-graphics-card-featured.jpg", use_column_width=True)
+
+st.divider()
+
 model_size = st.selectbox("選擇模型大小", MODEL_SIZE_LIST)
 model = load_model(model_size)
 
