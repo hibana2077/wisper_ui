@@ -1,0 +1,19 @@
+services:
+  web:
+    build: ./src/web
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./src/web:/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
