@@ -60,6 +60,7 @@ if audio_file:
     st.write("轉換完成!")
     st.write(result['text'])
     if result:
+        st.markdown("## 逐字稿預覽")
         st.dataframe(convert_to_dataframe(result).iloc[:15])
         st.download_button(
             label="下載逐字稿",
