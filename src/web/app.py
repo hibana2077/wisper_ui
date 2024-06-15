@@ -14,7 +14,7 @@ def convert_to_dataframe(result):
     new_data = []
     for item in result['segments']:
         new_data.append([item["start"], item["end"], item["text"]])
-    return pd.DataFrame(new_data, columns=col_name).to_csv().encode("utf-8")
+    return pd.DataFrame(new_data, columns=col_name)
 
 st.title("AI 語音轉逐字稿")
 
@@ -29,11 +29,12 @@ if audio_file:
     with open(file_name, "wb") as f:
         f.write(audio_file.read())
     result = model.transcribe(file_name)
-    st.write(result)
+    st.write(result['text'])
     if result:
+        st.dataframe(convert_to_dataframe(result))
         st.download_button(
             label="下載逐字稿",
-            data=convert_to_dataframe(result),
+            data=convert_to_dataframe(result).to_csv().encode("utf-8"),
             file_name="transcript.csv",
             mime="text/csv",
         )
