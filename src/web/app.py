@@ -47,7 +47,7 @@ if audio_file:
     result = model.transcribe(file_name)
     st.write(result['text'])
     if result:
-        st.dataframe(convert_to_dataframe(result))
+        st.dataframe(convert_to_dataframe(result).iloc[:15])
         st.download_button(
             label="下載逐字稿",
             data=convert_to_dataframe(result).to_csv().encode("utf-8"),
