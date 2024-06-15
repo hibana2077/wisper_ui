@@ -28,7 +28,7 @@ def convert_to_dataframe(result):
 
 st.title("AI 語音轉逐字稿")
 
-st.markdown("""![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B?style=plastic-square&logo=Streamlit)""")
+st.markdown("""![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B?style=plastic-square&logo=Streamlit)""")
 st.write("""這是一個使用 OpenAI 的 Whisper 模型來進行語音轉逐字稿的網頁應用程式。""")
 st.write("""Whisper 是一個基於 Transformer 的端對端語音轉文字模型，可以將語音檔案轉換成逐字稿。""")
 
