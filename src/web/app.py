@@ -24,12 +24,11 @@ model = load_model(model_size)
 audio_file = st.file_uploader("上傳音訊檔案", type=["mp3", "wav", "ogg"])
 
 if audio_file:
-    # convert to numpy array
-    audio_bytes = audio_file.read()
-    audio_array = np.frombuffer(audio_bytes, dtype=np.int16)
-
-    # inference
-    result = model.transcribe(audio_array)
+    file_name = audio_file.name
+    # save to local
+    with open(file_name, "wb") as f:
+        f.write(audio_file.read())
+    result = model.transcribe(file_name)
 
 st.write(result)
 
