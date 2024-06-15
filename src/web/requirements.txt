@@ -1,4 +1,5 @@
 jiwer
+streamlit
 pandas
 numpy
 openai-whisper
