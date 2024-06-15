@@ -52,7 +52,8 @@ if audio_file:
     # save to local
     with open(file_name, "wb") as f:
         f.write(audio_file.read())
-    result = model.transcribe(file_name)
+    with st.spinner("轉換中..."):
+        result = model.transcribe(file_name)
     st.write(result['text'])
     if result:
         st.dataframe(convert_to_dataframe(result).iloc[:15])
