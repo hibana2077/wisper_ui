@@ -29,8 +29,7 @@ if audio_file:
     with open(file_name, "wb") as f:
         f.write(audio_file.read())
     result = model.transcribe(file_name)
-
-st.write(result)
+    st.write(result)
 
 if result:
     st.download_button(
