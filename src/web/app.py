@@ -11,10 +11,11 @@ def load_model(size):
 
 @st.cache_data
 def convert_to_dataframe(result):
-    df = pd.DataFrame(result["words"])
-    df["start_time"] = df["start_time"].apply(lambda x: round(x, 2))
-    df["end_time"] = df["end_time"].apply(lambda x: round(x, 2))
-    return df.to_csv().encode("utf-8")
+    col_name = ["start", "end", "text"]
+    new_data = []
+    for item in result:
+        new_data.append([item["start"], item["end"], item["text"]])
+    return pd.DataFrame(new_data, columns=col_name).to_csv().encode("utf-8")
 
 st.title("AI 語音轉逐字稿")
 
@@ -30,11 +31,10 @@ if audio_file:
         f.write(audio_file.read())
     result = model.transcribe(file_name)
     st.write(result)
-
-if result:
-    st.download_button(
-        label="下載逐字稿",
-        data=convert_to_dataframe(result),
-        file_name="transcript.csv",
-        mime="text/csv",
-    )
+    if result:
+        st.download_button(
+            label="下載逐字稿",
+            data=convert_to_dataframe(result),
+            file_name="transcript.csv",
+            mime="text/csv",
+        )
