@@ -1,0 +1,4 @@
+jiwer
+pandas
+numpy
+openai-whisper
