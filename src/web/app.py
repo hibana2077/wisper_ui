@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 import whisper
 
@@ -13,7 +12,7 @@ def load_model(size):
 def convert_to_dataframe(result):
     col_name = ["start", "end", "text"]
     new_data = []
-    for item in result:
+    for item in result['segments']:
         new_data.append([item["start"], item["end"], item["text"]])
     return pd.DataFrame(new_data, columns=col_name).to_csv().encode("utf-8")
 
