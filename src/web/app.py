@@ -1,3 +1,11 @@
+'''
+Author: hibana2077 hibana2077@gmail.com
+Date: 2024-06-15 08:44:24
+LastEditors: hibana2077 hibana2077@gmail.com
+LastEditTime: 2024-06-16 10:56:01
+FilePath: \wisper_ui\src\web\app.py
+Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+'''
 import streamlit as st
 import pandas as pd
 import torch
@@ -29,7 +37,7 @@ def convert_to_dataframe(result):
 
 st.title("AI 語音轉逐字稿")
 
-st.markdown("""![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B?style=plastic-square&logo=Streamlit)""")
+st.markdown("""![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B?style=plastic-square&logo=Streamlit) [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=plastic-square&logo=GitHub)](https://github.com/hibana2077/wisper_ui)""")
 st.write("""這是一個使用 OpenAI 的 Whisper 模型來進行語音轉逐字稿的網頁應用程式。""")
 st.write("""Whisper 是一個基於 Transformer 的端對端語音轉文字模型，可以將語音檔案轉換成逐字稿。""")
 
