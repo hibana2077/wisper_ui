@@ -2,7 +2,7 @@
  * @Author: hibana2077 hibana2077@gmail.com
  * @Date: 2024-06-15 08:44:13
  * @LastEditors: hibana2077 hibana2077@gmail.com
- * @LastEditTime: 2024-06-15 10:28:32
+ * @LastEditTime: 2024-06-16 10:43:04
  * @FilePath: \wisper_ui\README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -43,7 +43,7 @@ To run this application, you must have Docker installed on your system with GPU 
 
 3. **Access the Application**:
    - **Locally**: Navigate to `http://localhost:8501` in your web browser to access the application.
-   - **Online**: Alternatively, you can access the application through the hosted version on [Hugging Face Spaces](https://huggingface.co/spaces/hibana2077/wisper_ui).
+   - **Online**: Alternatively, you can access the application through the hosted version on [My Server](https://wisperui.hibana2077.com/).
 
 These steps will set up the application, allowing you to use the powerful speech-to-text features powered by OpenAI’s Whisper model.
 
