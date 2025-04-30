@@ -8,7 +8,7 @@
 -->
 # Wisper UI
 
-![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-FF4B4B?style=plastic-square&logo=Streamlit)
+![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![Streamlit](https://img.shields.io/badge/Streamlit-1.45.0-FF4B4B?style=plastic-square&logo=Streamlit)
 
 ## Introduction
 

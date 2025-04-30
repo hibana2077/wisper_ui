@@ -54,7 +54,11 @@ st.divider()
 model_size = st.selectbox("選擇模型大小", MODEL_SIZE_LIST)
 model = load_model(model_size)
 
-audio_file = st.file_uploader("上傳音訊檔案", type=["mp3", "wav", "ogg"])
+tab1, tab2 = st.tabs(["上傳音訊檔案", "錄音"])
+with tab1:
+    audio_file = st.file_uploader("上傳音訊檔案", type=["mp3", "wav", "ogg"])
+with tab2:
+    audio_file = st.audio_input("錄音")
 
 if audio_file:
     file_name = audio_file.name
