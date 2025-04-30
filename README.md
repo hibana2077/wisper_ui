@@ -10,6 +10,12 @@
 
 ![OpenAI](https://img.shields.io/badge/OpenAI-Wisper-412991?style=plastic-square&logo=OpenAI) ![Streamlit](https://img.shields.io/badge/Streamlit-1.45.0-FF4B4B?style=plastic-square&logo=Streamlit)
 
+## New Features
+
+### 01.05.25
+
+- **Direct Recording**: Users can now record audio directly within the application, eliminating the need for external recording tools. This feature streamlines the process of capturing speech for transcription.
+
 ## Introduction
 
 This is a lightweight Streamlit application designed for efficient and accurate speech-to-text conversion using OpenAI's Whisper model. The application is intuitive and easy to use, featuring several key functionalities:
